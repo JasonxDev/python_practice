@@ -1,1 +1,1 @@
-print(8)
+int("This is not a number")
