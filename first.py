@@ -1,14 +1,9 @@
-def divide(a, b):
-    try:
-        int("This is not a number")  # CAUSES VALUE ERROR
-        return a / b
+from datetime import datetime, timedelta, timezone
 
-    except ValueError as e:
-        print("ValueError", e)
-    except NameError as e:
-        print("NameError", e)
-    except Exception as e:  # should go last, or else other except blocks will be unreachable
-        print("General", e)
+naïve_date = datetime(2023, 12, 21)
+offset = timezone(timedelta(hours=-5))
+x = naïve_date.replace(tzinfo=offset)  # 2023-12-21 00:00:00-05:00
+y = x.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-
-divide(9, 0)
+print(x)
+print(y)
