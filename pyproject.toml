@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-testing"
+name = "main.py"
 version = "0.1.0"
 description = ""
 authors = ["JasonxDev <jasonxdev@gmail.com>"]
