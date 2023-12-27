@@ -1,13 +1,17 @@
-from datetime import date
-from dateutil.relativedelta import relativedelta
+from datetime import datetime, date
 
-# Take object for today's date and fast forward 2 months using dateutil library
-today = date.today()  # Date object for 2023-12-27
-yesterday = today + relativedelta(days=20)  # Date object for 2023-12-26
-print(today)
-# Now convert the date object to a string
-dateString = yesterday.strftime("%Y-%m-%d")  # 2023-12-26
-print(yesterday)
+# Define two date objects
+date1 = datetime(2023, 12, 15)
+date2 = datetime(2020, 12, 27)
 
-diff = abs(today - yesterday)
-print(diff)
+# Calculate the day difference
+day_difference = (date2 - date1)
+absolute_day_difference = abs((date2 - date1).days)
+# week_difference = (date2 - date1).weeks
+# month_difference = (date2 - date1).months
+# year_difference = (date2 - date1).years
+
+print("day_difference", day_difference, absolute_day_difference)
+# print("week_difference", week_difference)
+# print("month_difference", month_difference)
+# print("year_difference", year_difference)
